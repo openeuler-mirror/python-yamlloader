@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:           python-yamlloader
 Version:        1.0.0
-Release:        1
+Release:        2
 Summary:        Ordered YAML loader and dumper for PyYAML.
 License:        MIT
 URL:            https://github.com/Phynix/yamlloader
@@ -37,7 +37,7 @@ Provides:       python3-yamlloader-doc
 This module provides loaders and dumpers for PyYAML.
 
 %prep
-%autosetup -n yamlloader-1.0.0 -S git
+%autosetup -n yamlloader-1.0.0 -p1
 
 %build
 %py3_build
@@ -84,5 +84,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Fri Jul 30 2021 chenyanpanHW <chenyanpan@huawei.com> - 1.0.0-2
+- DESC: delete -S git from %autosetup
+
 * Mon Jul 19 2021 OpenStack_SIG <openstack@openeuler.org> - 1.0.0-1
 - Package Spec generate
