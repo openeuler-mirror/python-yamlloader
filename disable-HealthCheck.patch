@@ -1,0 +1,13 @@
+--- a/tests/test_ordereddict.py	2021-03-04 00:58:27.000000000 +0800
++++ b/tests/test_ordereddict.py	2022-02-22 09:15:25.107796300 +0800
+@@ -12,7 +12,8 @@
+ 
+ import yamlloader
+ 
+-long_settings = settings(max_examples=10)
++long_settings = settings(max_examples=10,
++                             suppress_health_check=(hypothesis.HealthCheck.too_slow,))
+ # long_settings = settings(max_examples=100, max_iterations=200, max_shrinks=100,
+ #                          timeout=hypothesis.unlimited)
+ 
+

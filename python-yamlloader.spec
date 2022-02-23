@@ -1,11 +1,12 @@
 %global _empty_manifest_terminate_build 0
 Name:           python-yamlloader
 Version:        1.0.0
-Release:        2
+Release:        3
 Summary:        Ordered YAML loader and dumper for PyYAML.
 License:        MIT
 URL:            https://github.com/Phynix/yamlloader
 Source0:        yamlloader-1.0.0.tar.gz
+Patch01:        disable-HealthCheck.patch
 BuildArch:      noarch
 %description
 This module provides loaders and dumpers for PyYAML.
@@ -84,6 +85,9 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+Thu Feb 22 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 1.0.0-3
+- disable HealthCheck for riscv
+
 * Fri Jul 30 2021 chenyanpanHW <chenyanpan@huawei.com> - 1.0.0-2
 - DESC: delete -S git from %autosetup
 
